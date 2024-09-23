@@ -1,0 +1,8 @@
+# install with:
+# pip install -r requirements-pytorch.txt
+
+# Cuda 12.1 should be compatible with the Quadro M1000M laptop chip
+--index-url https://download.pytorch.org/whl/cu121
+torch
+torchvision
+torchaudio
