@@ -1,0 +1,6 @@
+[project]
+requires-python = ">=3.12"
+
+[tool.ruff]
+# See https://docs.astral.sh/ruff/configuration/
+line-length = 120
