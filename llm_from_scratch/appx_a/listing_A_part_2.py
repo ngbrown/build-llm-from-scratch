@@ -1,3 +1,16 @@
+# /// script
+# requires-python = ">=3.12"
+# dependencies = [
+#     "llm-from-scratch",
+#     "torch==2.4.1+cu121",
+# ]
+#
+# [tool.uv.sources]
+# llm-from-scratch = { path = "../../" }
+#
+# [tool.uv]
+# extra-index-url = ["https://download.pytorch.org/whl/cu121"]
+# ///
 import marimo
 
 __generated_with = "0.8.22"
