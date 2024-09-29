@@ -102,26 +102,12 @@ def __(torch):
 
 @app.cell
 def __(X_test, X_train, y_test, y_train):
-    from torch.utils.data import Dataset
-
-
-    class ToyDataset(Dataset):
-        def __init__(self, X, y):
-            self.features = X
-            self.labels = y
-
-        def __getitem__(self, index):
-            one_x = self.features[index]
-            one_y = self.labels[index]
-            return one_x, one_y
-
-        def __len__(self):
-            return self.labels.shape[0]
+    from llm_from_scratch.appx_a.toy_dataset import ToyDataset
 
 
     train_ds = ToyDataset(X_train, y_train)
     test_ds = ToyDataset(X_test, y_test)
-    return Dataset, ToyDataset, test_ds, train_ds
+    return ToyDataset, test_ds, train_ds
 
 
 @app.cell
