@@ -3,5 +3,6 @@
 
 marimo
 ruff
+tiktoken
 
 -e ./
