@@ -194,5 +194,41 @@ def __(NeuralNetwork, torch, train_loader):
     return F, cpu_model, device, gpu_model
 
 
+@app.cell
+def __(DataLoader, torch):
+    def compute_accuracy(
+        model: torch.nn.Module, dataloader: DataLoader, device: torch.device
+    ) -> float:
+        model = model.eval()
+        correct = 0.0
+        total_examples = 0
+
+        for idx, (features, labels) in enumerate(dataloader):
+            features, labels = features.to(device), labels.to(device)  # New
+
+            with torch.no_grad():
+                logits = model(features)
+
+            predictions = torch.argmax(logits, dim=1)
+            compare = labels == predictions
+            correct += torch.sum(compare)
+            total_examples += len(compare)
+
+        return (correct / total_examples).item()
+    return (compute_accuracy,)
+
+
+@app.cell
+def __(compute_accuracy, device, gpu_model, train_loader):
+    compute_accuracy(gpu_model, train_loader, device=device)
+    return
+
+
+@app.cell
+def __(compute_accuracy, device, gpu_model, test_loader):
+    compute_accuracy(gpu_model, test_loader, device=device)
+    return
+
+
 if __name__ == "__main__":
     app.run()
