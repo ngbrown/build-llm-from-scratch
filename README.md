@@ -16,5 +16,5 @@ uv sync
 Edit notebooks with [Marimo](https://marimo.io/):
 
 ```ps1
- marimo edit --sandbox .\llm_from_scratch\appx_a\listing_A_part_2.py
+marimo edit --sandbox .\llm_from_scratch\appx_a\listing_A_part_2.py
 ```

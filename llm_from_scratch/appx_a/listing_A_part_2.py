@@ -11,9 +11,10 @@
 # [tool.uv]
 # extra-index-url = ["https://download.pytorch.org/whl/cu121"]
 # ///
+
 import marimo
 
-__generated_with = "0.8.22"
+__generated_with = "0.9.10"
 app = marimo.App(width="medium")
 
 
@@ -23,19 +24,19 @@ def __():
     return (mo,)
 
 
-@app.cell
+@app.cell(hide_code=True)
 def __(mo):
     mo.md(r"""## Appendix A: Introduction to PyTorch (Part 2)""")
     return
 
 
-@app.cell
+@app.cell(hide_code=True)
 def __(mo):
     mo.md(r"""### A.9 Optimizing training performance with GPUs""")
     return
 
 
-@app.cell
+@app.cell(hide_code=True)
 def __(mo):
     mo.md(r"""### A.9.1 PyTorch computations on GPU devices""")
     return
@@ -82,7 +83,7 @@ def __(gpu_tensor_1):
     return
 
 
-@app.cell
+@app.cell(hide_code=True)
 def __(mo):
     mo.md(r"""### A.9.2 Single-GPU training""")
     return
