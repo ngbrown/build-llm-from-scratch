@@ -5,3 +5,4 @@
 *.pth
 *.pt
 *.egg-info/
+/number-data.txt
