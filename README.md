@@ -16,5 +16,5 @@ pip install -r requirements.txt
 Edit notebooks with [Marimo](https://marimo.io/):
 
 ```ps1
- marimo edit .\llm_from_scratch\appx_a\listing_A_part_2.py
+marimo edit .\llm_from_scratch\appx_a\listing_A_part_2.py
 ```

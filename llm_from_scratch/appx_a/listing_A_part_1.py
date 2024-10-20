@@ -10,7 +10,7 @@ def __():
     return (mo,)
 
 
-@app.cell
+@app.cell(hide_code=True)
 def __(mo):
     mo.md(r"""## Appendix A: Introduction to PyTorch""")
     return
@@ -30,13 +30,13 @@ def __(torch):
     return
 
 
-@app.cell
+@app.cell(hide_code=True)
 def __(mo):
     mo.md(r"""### A.2 Understanding tensors""")
     return
 
 
-@app.cell
+@app.cell(hide_code=True)
 def __(mo):
     mo.md(r"""### A.2.1 Scalars, vectors, matrices, and tensors""")
     return
@@ -93,7 +93,7 @@ def __(tensor3d_3):
     return
 
 
-@app.cell
+@app.cell(hide_code=True)
 def __(mo):
     mo.md(r"""### A.2.2 Tensor data types""")
     return
@@ -120,7 +120,7 @@ def __(tensor1d, torch):
     return
 
 
-@app.cell
+@app.cell(hide_code=True)
 def __(mo):
     mo.md(r"""### A.2.3 Common PyTorch tensor operations""")
     return
@@ -174,7 +174,7 @@ def __(tensor2d):
     return
 
 
-@app.cell
+@app.cell(hide_code=True)
 def __(mo):
     mo.md(r"""### A.3 Seeing models as computation graphs""")
     return
@@ -201,7 +201,7 @@ def __(F, torch):
     return
 
 
-@app.cell
+@app.cell(hide_code=True)
 def __(mo):
     mo.md(r"""### A.4 Automatic differentiation made easy""")
     return
@@ -240,7 +240,7 @@ def __(b, loss, mo, w1):
     return
 
 
-@app.cell
+@app.cell(hide_code=True)
 def __(mo):
     mo.md(r"""### A.5 Implementing multilayer neural networks""")
     return
@@ -322,7 +322,7 @@ def __(X, model_1, torch):
     return
 
 
-@app.cell
+@app.cell(hide_code=True)
 def __(mo):
     mo.md(r"""### A.6 Setting up efficient data loaders""")
     return
@@ -441,7 +441,7 @@ def __(equalsize_train_loader, mo):
     return
 
 
-@app.cell
+@app.cell(hide_code=True)
 def __(mo):
     mo.md(r"""### A.7 A typical training loop""")
     return
@@ -484,7 +484,7 @@ def __(model_2):
     return
 
 
-@app.cell
+@app.cell(hide_code=True)
 def __(mo):
     mo.md(r"""Exercise A.3: How many parameters does the neural network have?""")
     return
@@ -573,7 +573,7 @@ def __(compute_accuracy, model_2, test_loader):
     return
 
 
-@app.cell
+@app.cell(hide_code=True)
 def __(mo):
     mo.md(r"""### A.8 Saving and loading models""")
     return
